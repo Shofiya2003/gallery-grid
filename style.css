@@ -1,0 +1,129 @@
+body{
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+p{
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+.header{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px 0;
+    font-weight: 600px;
+
+}
+
+
+.profile-img img{
+    border-radius: 16px;
+    max-height: 100px;
+}
+
+.details{
+    margin: 10px 0 30px;
+    text-align: center;
+}
+
+.details .name{
+    font-size: 24px;
+    margin-bottom: 6.5px;
+}
+
+.details .city, .card .title{
+    font-size: 14px;
+    color: #a9a9a9;
+}
+
+.stats{
+    display: flex;
+    justify-content: center;
+}
+
+.card{
+    background-color: #E5E5E5;
+    width: 95px;
+    height: 55px;
+    margin:0 10px;
+    border-radius: 7px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card .count{
+    font-size: 18px;
+    margin:2.5px 0 1px;
+}
+
+
+.gallery{
+    margin:30px 14px;
+   
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(251px,1fr));
+    grid-template-rows: repeat(3,250px);
+    grid-gap: 25px;
+    grid-auto-flow: dense;
+}
+
+img.item{
+    /* height: 227px; */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.item-1{
+    grid-column: 1/span 1;
+}
+
+.item-2{
+    grid-column: 2/span 2;
+}
+
+.item-3{
+    grid-column: 1/span 2;
+    grid-row: 2;
+}
+
+.item-4{
+    grid-column: 3;
+    grid-row: 2/span 2;
+    /* height: 478px; */
+}
+
+.item-5{
+    grid-column: 1;
+    grid-row: 3;
+}
+
+.item-6{
+    grid-column: 2/span 1;
+    grid-row:3;
+}
+
+footer{
+    margin:10px 0 10px
+}
+
+
+@media screen and (max-width:1000px){
+    .gallery{
+    grid-template-columns: repeat(auto-fit,minmax(33%,1fr));
+    grid-template-rows: repeat(3,33%);
+    grid-gap: 2%;
+    }
+
+}
